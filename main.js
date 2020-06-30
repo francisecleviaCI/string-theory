@@ -139,18 +139,65 @@ console.log(numberedChars('Francis'))
 
 //#9//
 
-const crazyCase = function(str, str2){
-  let result = '';
-      
-  for (let i = 0; i < str.length; i++){
-    if (str % 2 === 0)
-   
-    result = result + str.toUpperCase
+const crazyCase = function(str){
+let result = '';
+for (let i = 0; i < str.length; i++){
+  const currentCharacter = str[i];     
+  if (i % 2 !== 0){
+    result = result + currentCharacter.toUpperCase();
+  } else {
+    result = result + currentCharacter.toLowerCase();
   }
-     return result;
+  }
+
+return result;
   
+}
+console.log(crazyCase('francis'))
+
+//#10//
+
+const titleCase = function(str){
+let result = '';
+str = str.split(" ");
+
+for (let i = 0; i < str.length; i++) {
+  str[i] = str[i][0].toUpperCase() + str[i].substr(1);
   }
-  console.log(crazyCase('Francis'))
+
+return str.join(" ");
+
+}
+
+console.log(titleCase("My brain is fried after trying to code for more than one hour."));
+
+//#11//
+const camelCase = function(str){
+
+}
+console.log(camelCase('francis'))
+
+
+//#12//
+const crazyCase2ReturnOfCrazyCase = function(str) {
+let result = '';
+for (let i = 0; i < str.length; i++){
+  const currentCharacter = str[i];     
+  if (i % 2 !== 0){
+    result = result + currentCharacter.toUpperCase();
+  } else {
+    result = result + currentCharacter.toLowerCase();
+  }
+  }
+
+return result;
+  
+}
+console.log(crazyCase('francis'))
+
+
+
+
 
 
  /********************************************
